@@ -1,0 +1,83 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "DisabilityProfile",
+  "description": "Schema for a disability profile used in accessibility evaluation configuration",
+  "type": "object",
+  "required": ["profile_id", "disability_type", "assistive_technologies", "wcag_criteria", "test_types"],
+  "properties": {
+    "profile_id": {
+      "type": "string",
+      "description": "Unique identifier for the profile",
+      "example": "hearing"
+    },
+    "disability_type": {
+      "type": "string",
+      "description": "Human-readable name of the disability type"
+    },
+    "description": {
+      "type": "string",
+      "description": "Brief description of the disability and its web accessibility implications"
+    },
+    "assistive_technologies": {
+      "type": "array",
+      "description": "Assistive technologies commonly used by people with this disability",
+      "items": { "type": "string" },
+      "minItems": 1
+    },
+    "wcag_criteria": {
+      "type": "array",
+      "description": "List of WCAG success criteria most relevant to this profile",
+      "items": {
+        "type": "object",
+        "required": ["criterion_id", "level", "priority", "test_type"],
+        "properties": {
+          "criterion_id": {
+            "type": "string",
+            "description": "WCAG success criterion identifier e.g. 1.2.2"
+          },
+          "level": {
+            "type": "string",
+            "enum": ["A", "AA", "AAA"],
+            "description": "WCAG conformance level"
+          },
+          "priority": {
+            "type": "string",
+            "enum": ["critical", "high", "medium", "low"],
+            "description": "Priority of this criterion for this disability profile"
+          },
+          "test_type": {
+            "type": "string",
+            "enum": ["manual", "automated", "both"],
+            "description": "How this criterion is best evaluated"
+          },
+          "rationale": {
+            "type": "string",
+            "description": "Why this criterion matters for this disability profile"
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "test_types": {
+      "type": "object",
+      "description": "Breakdown of evaluation approach for this profile",
+      "properties": {
+        "automated": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Criteria that can be checked automatically"
+        },
+        "manual": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Criteria that require manual human evaluation"
+        }
+      }
+    },
+    "legal_contexts": {
+      "type": "array",
+      "description": "Legal frameworks that reference this profile's criteria",
+      "items": { "type": "string" }
+    }
+  }
+}

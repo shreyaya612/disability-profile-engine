@@ -1,0 +1,68 @@
+{
+  "profile_id": "motor",
+  "disability_type": "Motor Impairment",
+  "description": "Users with motor impairments may have limited or no use of hands, limited fine motor control, or use adaptive devices such as switch access, eye tracking, or voice control instead of a standard mouse and keyboard.",
+  "assistive_technologies": [
+    "switch_access",
+    "eye_tracking",
+    "voice_control",
+    "keyboard_only_navigation",
+    "head_pointer",
+    "mouth_stick"
+  ],
+  "wcag_criteria": [
+    {
+      "criterion_id": "2.1.1",
+      "level": "A",
+      "priority": "critical",
+      "test_type": "both",
+      "rationale": "All functionality must be operable by keyboard alone as many motor-impaired users cannot use a mouse"
+    },
+    {
+      "criterion_id": "2.1.2",
+      "level": "A",
+      "priority": "critical",
+      "test_type": "manual",
+      "rationale": "No keyboard trap ensures users who navigate by keyboard can always move away from any component"
+    },
+    {
+      "criterion_id": "2.4.1",
+      "level": "A",
+      "priority": "high",
+      "test_type": "manual",
+      "rationale": "Skip navigation links reduce the burden of tabbing through repeated content for keyboard-only users"
+    },
+    {
+      "criterion_id": "2.4.3",
+      "level": "A",
+      "priority": "high",
+      "test_type": "manual",
+      "rationale": "Logical focus order reduces navigation effort and errors for users relying on sequential keyboard access"
+    },
+    {
+      "criterion_id": "2.5.1",
+      "level": "A",
+      "priority": "high",
+      "test_type": "manual",
+      "rationale": "Pointer gestures requiring complex movements must have single-pointer alternatives for users with limited dexterity"
+    },
+    {
+      "criterion_id": "2.5.3",
+      "level": "A",
+      "priority": "medium",
+      "test_type": "automated",
+      "rationale": "Label in name ensures voice control users can activate components by speaking their visible label"
+    }
+  ],
+  "test_types": {
+    "automated": ["2.5.3"],
+    "manual": ["2.1.2", "2.4.1", "2.4.3", "2.5.1"],
+    "both": ["2.1.1"]
+  },
+  "legal_contexts": [
+    "WCAG 2.2",
+    "EN 301 549",
+    "ADA Section 508",
+    "European Accessibility Act"
+  ]
+}

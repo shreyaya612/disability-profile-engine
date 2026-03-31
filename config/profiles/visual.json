@@ -1,0 +1,74 @@
+{
+  "profile_id": "visual",
+  "disability_type": "Visual Impairment",
+  "description": "Users who are blind or have low vision rely on screen readers, magnification, and high contrast modes. They navigate by keyboard and depend on semantic HTML structure, meaningful alt text, and focus management.",
+  "assistive_technologies": [
+    "screen_readers",
+    "braille_displays",
+    "screen_magnification",
+    "high_contrast_mode",
+    "keyboard_navigation"
+  ],
+  "wcag_criteria": [
+    {
+      "criterion_id": "1.1.1",
+      "level": "A",
+      "priority": "critical",
+      "test_type": "both",
+      "rationale": "Images, icons, and non-text content must have meaningful alt text for screen reader users"
+    },
+    {
+      "criterion_id": "1.3.1",
+      "level": "A",
+      "priority": "critical",
+      "test_type": "both",
+      "rationale": "Information conveyed through visual structure must also be available programmatically to screen readers"
+    },
+    {
+      "criterion_id": "1.4.1",
+      "level": "A",
+      "priority": "high",
+      "test_type": "manual",
+      "rationale": "Color must not be the only means of conveying information as blind users cannot perceive color"
+    },
+    {
+      "criterion_id": "1.4.3",
+      "level": "AA",
+      "priority": "critical",
+      "test_type": "automated",
+      "rationale": "Sufficient contrast between text and background is essential for low vision users"
+    },
+    {
+      "criterion_id": "2.1.1",
+      "level": "A",
+      "priority": "critical",
+      "test_type": "both",
+      "rationale": "Full keyboard accessibility is required as blind users cannot use a mouse"
+    },
+    {
+      "criterion_id": "2.4.3",
+      "level": "A",
+      "priority": "high",
+      "test_type": "manual",
+      "rationale": "Logical focus order ensures screen reader users navigate content in a meaningful sequence"
+    },
+    {
+      "criterion_id": "4.1.2",
+      "level": "A",
+      "priority": "critical",
+      "test_type": "both",
+      "rationale": "Name, role, and value of UI components must be programmatically determinable for screen readers"
+    }
+  ],
+  "test_types": {
+    "automated": ["1.4.3"],
+    "manual": ["1.4.1", "2.4.3"],
+    "both": ["1.1.1", "1.3.1", "2.1.1", "4.1.2"]
+  },
+  "legal_contexts": [
+    "WCAG 2.2",
+    "EN 301 549",
+    "ADA Section 508",
+    "European Accessibility Act"
+  ]
+}

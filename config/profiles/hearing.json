@@ -1,0 +1,75 @@
+{
+  "profile_id": "hearing",
+  "disability_type": "Hearing Impairment",
+  "description": "Users who are deaf or hard of hearing rely on visual alternatives to audio content. They may use captions, transcripts, and visual alerts instead of audio cues. Most caption quality checks cannot be fully automated and require manual evaluation.",
+  "assistive_technologies": [
+    "closed_captions",
+    "open_captions",
+    "transcripts",
+    "sign_language_interpretation",
+    "visual_alerts",
+    "text_based_communication"
+  ],
+  "wcag_criteria": [
+    {
+      "criterion_id": "1.1.1",
+      "level": "A",
+      "priority": "high",
+      "test_type": "both",
+      "rationale": "Non-text content such as audio-only files must have text alternatives so hearing-impaired users can access the information"
+    },
+    {
+      "criterion_id": "1.2.1",
+      "level": "A",
+      "priority": "critical",
+      "test_type": "manual",
+      "rationale": "Audio-only content must provide a text transcript as the sole means of access for deaf and hard-of-hearing users"
+    },
+    {
+      "criterion_id": "1.2.2",
+      "level": "A",
+      "priority": "critical",
+      "test_type": "manual",
+      "rationale": "Captions for prerecorded video are the primary way deaf users access spoken content. Accuracy, synchronization, and speaker identification all require manual review"
+    },
+    {
+      "criterion_id": "1.2.3",
+      "level": "A",
+      "priority": "high",
+      "test_type": "manual",
+      "rationale": "Audio descriptions or full media alternatives ensure users who cannot hear the audio track can still access all information"
+    },
+    {
+      "criterion_id": "1.2.4",
+      "level": "AA",
+      "priority": "critical",
+      "test_type": "manual",
+      "rationale": "Live captions are essential for real-time access to live audio content such as webinars, lectures, and broadcasts"
+    },
+    {
+      "criterion_id": "1.2.6",
+      "level": "AAA",
+      "priority": "medium",
+      "test_type": "manual",
+      "rationale": "Sign language interpretation for prerecorded audio provides access for users whose primary language is a sign language"
+    },
+    {
+      "criterion_id": "1.4.2",
+      "level": "A",
+      "priority": "low",
+      "test_type": "automated",
+      "rationale": "Audio control ensures users are not overwhelmed by auto-playing audio they cannot easily mute"
+    }
+  ],
+  "test_types": {
+    "automated": ["1.4.2"],
+    "manual": ["1.2.1", "1.2.2", "1.2.3", "1.2.4", "1.2.6"],
+    "both": ["1.1.1"]
+  },
+  "legal_contexts": [
+    "WCAG 2.2",
+    "EN 301 549",
+    "ADA Section 508",
+    "European Accessibility Act"
+  ]
+}

@@ -1,0 +1,171 @@
+{
+  "evaluation_config": {
+    "profiles_used": [
+      "hearing",
+      "visual"
+    ],
+    "conformance_target": "AA",
+    "assistive_technologies": [
+      "closed_captions",
+      "open_captions",
+      "transcripts",
+      "sign_language_interpretation",
+      "visual_alerts",
+      "text_based_communication",
+      "screen_readers",
+      "braille_displays",
+      "screen_magnification",
+      "high_contrast_mode",
+      "keyboard_navigation"
+    ]
+  },
+  "summary": {
+    "total_criteria": 12,
+    "by_priority": {
+      "critical": 8,
+      "high": 3,
+      "medium": 0,
+      "low": 1
+    },
+    "by_test_type": {
+      "manual": 6,
+      "automated": 2,
+      "both": 4
+    }
+  },
+  "test_matrix": [
+    {
+      "criterion_id": "1.1.1",
+      "name": "Non-text Content",
+      "level": "A",
+      "test_type": "both",
+      "priority": "critical",
+      "rationale": "Non-text content such as audio-only files must have text alternatives so hearing-impaired users can access the information",
+      "applicable_profiles": [
+        "hearing",
+        "visual"
+      ]
+    },
+    {
+      "criterion_id": "1.2.1",
+      "name": "Audio-only and Video-only (Prerecorded)",
+      "level": "A",
+      "test_type": "manual",
+      "priority": "critical",
+      "rationale": "Audio-only content must provide a text transcript as the sole means of access for deaf and hard-of-hearing users",
+      "applicable_profiles": [
+        "hearing"
+      ]
+    },
+    {
+      "criterion_id": "1.2.2",
+      "name": "Captions (Prerecorded)",
+      "level": "A",
+      "test_type": "manual",
+      "priority": "critical",
+      "rationale": "Captions for prerecorded video are the primary way deaf users access spoken content. Accuracy, synchronization, and speaker identification all require manual review",
+      "applicable_profiles": [
+        "hearing"
+      ]
+    },
+    {
+      "criterion_id": "1.2.4",
+      "name": "Captions (Live)",
+      "level": "AA",
+      "test_type": "manual",
+      "priority": "critical",
+      "rationale": "Live captions are essential for real-time access to live audio content such as webinars, lectures, and broadcasts",
+      "applicable_profiles": [
+        "hearing"
+      ]
+    },
+    {
+      "criterion_id": "1.3.1",
+      "name": "Info and Relationships",
+      "level": "A",
+      "test_type": "both",
+      "priority": "critical",
+      "rationale": "Information conveyed through visual structure must also be available programmatically to screen readers",
+      "applicable_profiles": [
+        "visual"
+      ]
+    },
+    {
+      "criterion_id": "1.4.3",
+      "name": "Contrast (Minimum)",
+      "level": "AA",
+      "test_type": "automated",
+      "priority": "critical",
+      "rationale": "Sufficient contrast between text and background is essential for low vision users",
+      "applicable_profiles": [
+        "visual"
+      ]
+    },
+    {
+      "criterion_id": "2.1.1",
+      "name": "Keyboard",
+      "level": "A",
+      "test_type": "both",
+      "priority": "critical",
+      "rationale": "Full keyboard accessibility is required as blind users cannot use a mouse",
+      "applicable_profiles": [
+        "visual"
+      ]
+    },
+    {
+      "criterion_id": "4.1.2",
+      "name": "Name, Role, Value",
+      "level": "A",
+      "test_type": "both",
+      "priority": "critical",
+      "rationale": "Name, role, and value of UI components must be programmatically determinable for screen readers",
+      "applicable_profiles": [
+        "visual"
+      ]
+    },
+    {
+      "criterion_id": "1.2.3",
+      "name": "Audio Description or Media Alternative (Prerecorded)",
+      "level": "A",
+      "test_type": "manual",
+      "priority": "high",
+      "rationale": "Audio descriptions or full media alternatives ensure users who cannot hear the audio track can still access all information",
+      "applicable_profiles": [
+        "hearing"
+      ]
+    },
+    {
+      "criterion_id": "1.4.1",
+      "name": "Use of Color",
+      "level": "A",
+      "test_type": "manual",
+      "priority": "high",
+      "rationale": "Color must not be the only means of conveying information as blind users cannot perceive color",
+      "applicable_profiles": [
+        "visual"
+      ]
+    },
+    {
+      "criterion_id": "2.4.3",
+      "name": "Focus Order",
+      "level": "A",
+      "test_type": "manual",
+      "priority": "high",
+      "rationale": "Logical focus order ensures screen reader users navigate content in a meaningful sequence",
+      "applicable_profiles": [
+        "visual"
+      ]
+    },
+    {
+      "criterion_id": "1.4.2",
+      "name": "Audio Control",
+      "level": "A",
+      "test_type": "automated",
+      "priority": "low",
+      "rationale": "Audio control ensures users are not overwhelmed by auto-playing audio they cannot easily mute",
+      "applicable_profiles": [
+        "hearing"
+      ]
+    }
+  ]
+}

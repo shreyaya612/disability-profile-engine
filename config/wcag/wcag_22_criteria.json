@@ -1,0 +1,544 @@
+{
+  "version": "WCAG 2.2",
+  "last_updated": "2023-10-05",
+  "source": "https://www.w3.org/TR/WCAG22/",
+  "principles": [
+    {
+      "id": "1",
+      "name": "Perceivable",
+      "description": "Information and user interface components must be presentable to users in ways they can perceive.",
+      "guidelines": [
+        {
+          "id": "1.1",
+          "name": "Text Alternatives",
+          "description": "Provide text alternatives for any non-text content.",
+          "criteria": [
+            {
+              "id": "1.1.1",
+              "name": "Non-text Content",
+              "level": "A",
+              "description": "All non-text content that is presented to the user has a text alternative that serves the equivalent purpose.",
+              "test_type": "both",
+              "automation_possible": "partial",
+              "notes": "Automated tools can detect missing alt attributes but cannot assess alt text quality."
+            }
+          ]
+        },
+        {
+          "id": "1.2",
+          "name": "Time-based Media",
+          "description": "Provide alternatives for time-based media.",
+          "criteria": [
+            {
+              "id": "1.2.1",
+              "name": "Audio-only and Video-only (Prerecorded)",
+              "level": "A",
+              "description": "For prerecorded audio-only and video-only media, an alternative is provided.",
+              "test_type": "manual",
+              "automation_possible": "none",
+              "notes": "Requires human review to verify transcript accuracy and completeness."
+            },
+            {
+              "id": "1.2.2",
+              "name": "Captions (Prerecorded)",
+              "level": "A",
+              "description": "Captions are provided for all prerecorded audio content in synchronized media.",
+              "test_type": "manual",
+              "automation_possible": "partial",
+              "notes": "Automated tools can detect presence of captions but not accuracy, synchronisation, or speaker identification."
+            },
+            {
+              "id": "1.2.3",
+              "name": "Audio Description or Media Alternative (Prerecorded)",
+              "level": "A",
+              "description": "An alternative for time-based media or audio description is provided for prerecorded video content.",
+              "test_type": "manual",
+              "automation_possible": "none",
+              "notes": "Requires human evaluation to assess whether visual information is conveyed."
+            },
+            {
+              "id": "1.2.4",
+              "name": "Captions (Live)",
+              "level": "AA",
+              "description": "Captions are provided for all live audio content in synchronized media.",
+              "test_type": "manual",
+              "automation_possible": "none",
+              "notes": "Live captions must be evaluated in real time. Cannot be automated."
+            },
+            {
+              "id": "1.2.5",
+              "name": "Audio Description (Prerecorded)",
+              "level": "AA",
+              "description": "Audio description is provided for all prerecorded video content.",
+              "test_type": "manual",
+              "automation_possible": "none",
+              "notes": "Requires human review to verify audio description quality and completeness."
+            },
+            {
+              "id": "1.2.6",
+              "name": "Sign Language (Prerecorded)",
+              "level": "AAA",
+              "description": "Sign language interpretation is provided for all prerecorded audio content.",
+              "test_type": "manual",
+              "automation_possible": "none",
+              "notes": "AAA criterion. Requires human evaluation."
+            },
+            {
+              "id": "1.2.7",
+              "name": "Extended Audio Description (Prerecorded)",
+              "level": "AAA",
+              "description": "Extended audio description is provided for all prerecorded video content.",
+              "test_type": "manual",
+              "automation_possible": "none",
+              "notes": "AAA criterion."
+            },
+            {
+              "id": "1.2.8",
+              "name": "Media Alternative (Prerecorded)",
+              "level": "AAA",
+              "description": "An alternative for time-based media is provided for all prerecorded synchronized media.",
+              "test_type": "manual",
+              "automation_possible": "none",
+              "notes": "AAA criterion."
+            },
+            {
+              "id": "1.2.9",
+              "name": "Audio-only (Live)",
+              "level": "AAA",
+              "description": "An alternative for time-based media is provided for live audio-only content.",
+              "test_type": "manual",
+              "automation_possible": "none",
+              "notes": "AAA criterion. Live content only."
+            }
+          ]
+        },
+        {
+          "id": "1.3",
+          "name": "Adaptable",
+          "description": "Create content that can be presented in different ways without losing information.",
+          "criteria": [
+            {
+              "id": "1.3.1",
+              "name": "Info and Relationships",
+              "level": "A",
+              "description": "Information, structure, and relationships conveyed through presentation can be programmatically determined.",
+              "test_type": "both",
+              "automation_possible": "partial",
+              "notes": "Automated tools can check semantic HTML but cannot fully assess logical structure."
+            },
+            {
+              "id": "1.3.2",
+              "name": "Meaningful Sequence",
+              "level": "A",
+              "description": "If the sequence in which content is presented affects its meaning, the correct reading sequence can be programmatically determined.",
+              "test_type": "both",
+              "automation_possible": "partial",
+              "notes": null
+            },
+            {
+              "id": "1.3.3",
+              "name": "Sensory Characteristics",
+              "level": "A",
+              "description": "Instructions do not rely solely on sensory characteristics such as shape, color, size, visual location, or sound.",
+              "test_type": "manual",
+              "automation_possible": "none",
+              "notes": "Requires human review to identify sensory-only instructions."
+            },
+            {
+              "id": "1.3.4",
+              "name": "Orientation",
+              "level": "AA",
+              "description": "Content does not restrict its view and operation to a single display orientation.",
+              "test_type": "both",
+              "automation_possible": "partial",
+              "notes": null
+            },
+            {
+              "id": "1.3.5",
+              "name": "Identify Input Purpose",
+              "level": "AA",
+              "description": "The purpose of each input field collecting information about the user can be programmatically determined.",
+              "test_type": "automated",
+              "automation_possible": "full",
+              "notes": "Can be checked by verifying autocomplete attributes."
+            },
+            {
+              "id": "1.3.6",
+              "name": "Identify Purpose",
+              "level": "AAA",
+              "description": "In content implemented using markup languages, the purpose of UI components, icons, and regions can be programmatically determined.",
+              "test_type": "both",
+              "automation_possible": "partial",
+              "notes": "AAA criterion."
+            }
+          ]
+        },
+        {
+          "id": "1.4",
+          "name": "Distinguishable",
+          "description": "Make it easier for users to see and hear content.",
+          "criteria": [
+            {
+              "id": "1.4.1",
+              "name": "Use of Color",
+              "level": "A",
+              "description": "Color is not used as the only visual means of conveying information.",
+              "test_type": "manual",
+              "automation_possible": "partial",
+              "notes": "Automated tools can flag color-only patterns but human review is needed for context."
+            },
+            {
+              "id": "1.4.2",
+              "name": "Audio Control",
+              "level": "A",
+              "description": "If any audio plays automatically for more than 3 seconds, a mechanism to pause or stop it is available.",
+              "test_type": "automated",
+              "automation_possible": "partial",
+              "notes": "Presence of autoplay can be detected; control availability needs verification."
+            },
+            {
+              "id": "1.4.3",
+              "name": "Contrast (Minimum)",
+              "level": "AA",
+              "description": "Text has a contrast ratio of at least 4.5:1 against its background.",
+              "test_type": "automated",
+              "automation_possible": "full",
+              "notes": "Well-supported by automated tools such as axe-core."
+            },
+            {
+              "id": "1.4.4",
+              "name": "Resize Text",
+              "level": "AA",
+              "description": "Text can be resized up to 200% without loss of content or functionality.",
+              "test_type": "manual",
+              "automation_possible": "none",
+              "notes": "Requires manual browser zoom testing."
+            },
+            {
+              "id": "1.4.5",
+              "name": "Images of Text",
+              "level": "AA",
+              "description": "Text is used instead of images of text where possible.",
+              "test_type": "both",
+              "automation_possible": "partial",
+              "notes": null
+            },
+            {
+              "id": "1.4.10",
+              "name": "Reflow",
+              "level": "AA",
+              "description": "Content can be presented without loss of information at 400% zoom without horizontal scrolling.",
+              "test_type": "manual",
+              "automation_possible": "none",
+              "notes": "New in WCAG 2.1. Requires manual testing at 400% zoom."
+            },
+            {
+              "id": "1.4.11",
+              "name": "Non-text Contrast",
+              "level": "AA",
+              "description": "UI components and graphical objects have a contrast ratio of at least 3:1.",
+              "test_type": "both",
+              "automation_possible": "partial",
+              "notes": "New in WCAG 2.1."
+            },
+            {
+              "id": "1.4.12",
+              "name": "Text Spacing",
+              "level": "AA",
+              "description": "No loss of content when text spacing properties are overridden.",
+              "test_type": "both",
+              "automation_possible": "partial",
+              "notes": "New in WCAG 2.1."
+            },
+            {
+              "id": "1.4.13",
+              "name": "Content on Hover or Focus",
+              "level": "AA",
+              "description": "Additional content triggered by hover or focus can be dismissed, hovered, and is persistent.",
+              "test_type": "manual",
+              "automation_possible": "none",
+              "notes": "New in WCAG 2.1. Requires interactive testing."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "name": "Operable",
+      "description": "User interface components and navigation must be operable.",
+      "guidelines": [
+        {
+          "id": "2.1",
+          "name": "Keyboard Accessible",
+          "description": "Make all functionality available from a keyboard.",
+          "criteria": [
+            {
+              "id": "2.1.1",
+              "name": "Keyboard",
+              "level": "A",
+              "description": "All functionality is operable through a keyboard interface.",
+              "test_type": "both",
+              "automation_possible": "partial",
+              "notes": "Automated tools can flag non-interactive elements; full keyboard testing requires manual review."
+            },
+            {
+              "id": "2.1.2",
+              "name": "No Keyboard Trap",
+              "level": "A",
+              "description": "Keyboard focus can always be moved away from any component.",
+              "test_type": "manual",
+              "automation_possible": "none",
+              "notes": "Requires manual keyboard navigation to identify traps."
+            },
+            {
+              "id": "2.1.4",
+              "name": "Character Key Shortcuts",
+              "level": "A",
+              "description": "Single-character key shortcuts can be turned off, remapped, or activated only on focus.",
+              "test_type": "manual",
+              "automation_possible": "none",
+              "notes": "New in WCAG 2.1."
+            }
+          ]
+        },
+        {
+          "id": "2.4",
+          "name": "Navigable",
+          "description": "Provide ways to help users navigate, find content, and determine where they are.",
+          "criteria": [
+            {
+              "id": "2.4.1",
+              "name": "Bypass Blocks",
+              "level": "A",
+              "description": "A mechanism is available to bypass blocks of content that are repeated on multiple pages.",
+              "test_type": "both",
+              "automation_possible": "partial",
+              "notes": "Skip links can be detected; effectiveness requires manual testing."
+            },
+            {
+              "id": "2.4.3",
+              "name": "Focus Order",
+              "level": "A",
+              "description": "Focusable components receive focus in an order that preserves meaning and operability.",
+              "test_type": "manual",
+              "automation_possible": "partial",
+              "notes": "Tab order can be extracted but logical sequence requires human judgment."
+            },
+            {
+              "id": "2.4.7",
+              "name": "Focus Visible",
+              "level": "AA",
+              "description": "Any keyboard operable user interface has a mode where the keyboard focus indicator is visible.",
+              "test_type": "both",
+              "automation_possible": "partial",
+              "notes": null
+            },
+            {
+              "id": "2.4.11",
+              "name": "Focus Not Obscured (Minimum)",
+              "level": "AA",
+              "description": "When a component receives keyboard focus, it is not entirely hidden by author-created content.",
+              "test_type": "manual",
+              "automation_possible": "none",
+              "notes": "New in WCAG 2.2."
+            }
+          ]
+        },
+        {
+          "id": "2.5",
+          "name": "Input Modalities",
+          "description": "Make it easier for users to operate functionality through various inputs beyond keyboard.",
+          "criteria": [
+            {
+              "id": "2.5.1",
+              "name": "Pointer Gestures",
+              "level": "A",
+              "description": "All functionality that uses multipoint or path-based gestures has a single-pointer alternative.",
+              "test_type": "manual",
+              "automation_possible": "none",
+              "notes": "New in WCAG 2.1."
+            },
+            {
+              "id": "2.5.3",
+              "name": "Label in Name",
+              "level": "A",
+              "description": "For UI components with text labels, the accessible name contains the visible text.",
+              "test_type": "automated",
+              "automation_possible": "full",
+              "notes": "New in WCAG 2.1. Well-supported by axe-core."
+            },
+            {
+              "id": "2.5.7",
+              "name": "Dragging Movements",
+              "level": "AA",
+              "description": "All functionality that uses dragging movements has a single-pointer alternative.",
+              "test_type": "manual",
+              "automation_possible": "none",
+              "notes": "New in WCAG 2.2."
+            },
+            {
+              "id": "2.5.8",
+              "name": "Target Size (Minimum)",
+              "level": "AA",
+              "description": "The size of the target for pointer inputs is at least 24x24 CSS pixels.",
+              "test_type": "automated",
+              "automation_possible": "partial",
+              "notes": "New in WCAG 2.2."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "name": "Understandable",
+      "description": "Information and the operation of user interface must be understandable.",
+      "guidelines": [
+        {
+          "id": "3.1",
+          "name": "Readable",
+          "description": "Make text content readable and understandable.",
+          "criteria": [
+            {
+              "id": "3.1.1",
+              "name": "Language of Page",
+              "level": "A",
+              "description": "The default human language of each page can be programmatically determined.",
+              "test_type": "automated",
+              "automation_possible": "full",
+              "notes": "Easily checked via lang attribute on html element."
+            },
+            {
+              "id": "3.1.2",
+              "name": "Language of Parts",
+              "level": "AA",
+              "description": "The human language of each passage or phrase can be programmatically determined.",
+              "test_type": "both",
+              "automation_possible": "partial",
+              "notes": null
+            }
+          ]
+        },
+        {
+          "id": "3.2",
+          "name": "Predictable",
+          "description": "Make pages appear and operate in predictable ways.",
+          "criteria": [
+            {
+              "id": "3.2.1",
+              "name": "On Focus",
+              "level": "A",
+              "description": "Receiving focus does not initiate a change of context.",
+              "test_type": "manual",
+              "automation_possible": "none",
+              "notes": "Requires interactive keyboard testing."
+            },
+            {
+              "id": "3.2.2",
+              "name": "On Input",
+              "level": "A",
+              "description": "Changing a UI component does not automatically cause a change of context.",
+              "test_type": "manual",
+              "automation_possible": "none",
+              "notes": "Requires interactive testing."
+            },
+            {
+              "id": "3.2.6",
+              "name": "Consistent Help",
+              "level": "A",
+              "description": "Help mechanisms appear in the same location across pages.",
+              "test_type": "manual",
+              "automation_possible": "none",
+              "notes": "New in WCAG 2.2."
+            }
+          ]
+        },
+        {
+          "id": "3.3",
+          "name": "Input Assistance",
+          "description": "Help users avoid and correct mistakes.",
+          "criteria": [
+            {
+              "id": "3.3.1",
+              "name": "Error Identification",
+              "level": "A",
+              "description": "Input errors are identified and described to the user in text.",
+              "test_type": "both",
+              "automation_possible": "partial",
+              "notes": "Presence of error messages can be detected; quality requires manual review."
+            },
+            {
+              "id": "3.3.2",
+              "name": "Labels or Instructions",
+              "level": "A",
+              "description": "Labels or instructions are provided when content requires user input.",
+              "test_type": "both",
+              "automation_possible": "partial",
+              "notes": null
+            },
+            {
+              "id": "3.3.7",
+              "name": "Redundant Entry",
+              "level": "A",
+              "description": "Information previously entered is either auto-populated or available for selection.",
+              "test_type": "manual",
+              "automation_possible": "none",
+              "notes": "New in WCAG 2.2."
+            },
+            {
+              "id": "3.3.8",
+              "name": "Accessible Authentication (Minimum)",
+              "level": "AA",
+              "description": "Authentication processes do not rely on cognitive function tests unless an alternative is provided.",
+              "test_type": "manual",
+              "automation_possible": "none",
+              "notes": "New in WCAG 2.2. CAPTCHAs are a common failure."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "name": "Robust",
+      "description": "Content must be robust enough to be interpreted by a wide variety of user agents.",
+      "guidelines": [
+        {
+          "id": "4.1",
+          "name": "Compatible",
+          "description": "Maximise compatibility with current and future user agents and assistive technologies.",
+          "criteria": [
+            {
+              "id": "4.1.1",
+              "name": "Parsing",
+              "level": "A",
+              "description": "In content implemented in markup languages, elements have complete start and end tags and are nested according to their specifications.",
+              "test_type": "automated",
+              "automation_possible": "full",
+              "notes": "Obsolete in WCAG 2.2 — always passes. Kept for completeness."
+            },
+            {
+              "id": "4.1.2",
+              "name": "Name, Role, Value",
+              "level": "A",
+              "description": "For all UI components, the name, role, state, and value can be programmatically determined.",
+              "test_type": "both",
+              "automation_possible": "partial",
+              "notes": "Core criterion for screen reader compatibility. Partially automatable via axe-core."
+            },
+            {
+              "id": "4.1.3",
+              "name": "Status Messages",
+              "level": "AA",
+              "description": "Status messages can be programmatically determined through role or properties without receiving focus.",
+              "test_type": "both",
+              "automation_possible": "partial",
+              "notes": "New in WCAG 2.1. ARIA live regions."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
